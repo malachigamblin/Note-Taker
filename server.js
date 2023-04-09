@@ -43,6 +43,11 @@ function addNewThought(body, thoughtArray) {
     return newThought;
 }
 
+app.post('/api/notes', (req, res) => {
+    const newThought = addNewThought(req.body, thoughts);
+    res.json(newThought);
+});
+
 app.listen(PORT, () => {
     console.log(`API server now on port ${PORT}!`);
 });
