@@ -24,7 +24,7 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 
-function addNewThought(body, thoughtArray) {
+const addNewThought = (body, thoughtArray) => {
   const newThought = body;
   if (!Array.isArray(thoughtArray)) thoughtArray = [];
 
@@ -39,14 +39,14 @@ function addNewThought(body, thoughtArray) {
     JSON.stringify(thoughtArray, null, 2)
   );
   return newThought;
-}
+};
 
 app.post("/api/notes", (req, res) => {
   const newThought = addNewThought(req.body, thoughts);
   res.json(newThought);
 });
 
-function deleteThought(id, thoughtArray) {
+const deleteThought = (id, thoughtArray) => {
   for (let i = 0; i < thoughtArray.length; i++) {
     let note = thoughtArray[i];
 
@@ -60,7 +60,7 @@ function deleteThought(id, thoughtArray) {
       break;
     }
   }
-}
+};
 
 app.delete("/api/notes/:id", (req, res) => {
   deleteThought(req.params.id, thoughts);

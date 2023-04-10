@@ -8,8 +8,8 @@
 - [Usage](#usage)
 - [Contribute](#contribute)
 - [Tests](#tests)
-- [Deplpyed-Application](#deployed-application)
 - [Screenshots](#screenshots)
+- [Deplpyed-Application](#deployed-application)
 - [Questions](#questions)
 - [License](#license)
 
