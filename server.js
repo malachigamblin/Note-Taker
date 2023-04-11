@@ -39,7 +39,8 @@ const addNewThought = (body, thoughtArray) => {
     JSON.stringify(thoughtArray, null, 2)
   );
   return newThought;
-};
+}
+
 
 app.post("/api/notes", (req, res) => {
   const newThought = addNewThought(req.body, thoughts);
@@ -60,7 +61,8 @@ const deleteThought = (id, thoughtArray) => {
       break;
     }
   }
-};
+}
+
 
 app.delete("/api/notes/:id", (req, res) => {
   deleteThought(req.params.id, thoughts);
