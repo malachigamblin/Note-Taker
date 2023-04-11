@@ -42,7 +42,7 @@ Run "npm test" in the folder of your repo to test the code.
 
 ## Deployed Application
 
-https://boiling-everglades-88636.herokuapp.com/notes 
+https://boiling-everglades-88636.herokuapp.com
 
 ## Questions
 
